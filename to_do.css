@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+
+
+}
+.todo-app {
+    width: 100%;                   /*pahile to us todo list block ko pura width assign karo*/
+    max-width: 540px;              /*us todo list block ko ek max width tk hi bada karo...vo hai max-width*/
+    background: #fff;
+    margin: 100px auto 20px ;      /*us todolis dabba ko pura container mei kaha kaha se margin krna hai vo likho*/
+    padding: 40px 30px 70px;       /*todo list ke andar jo hai uko baju se kitna padding dena hai vo likho*/
+    border-radius: 20px;
+
+}
+
+
+/* yaha h2 ke andar hi to vo text and img hai...jisko hum side by side aligh kr rahe hai */
+.todo-app h2 {
+    color: black;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    margin: 20px;       /*us text and img ko dono ko combine mei margin mila hai from all sides*/
+
+}
+.todo-app h2 img {
+    height: 35px;
+    width: 305x;
+    margin-left:10px;
+    
+
+}
+
+.nav {
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background: #edeef0;
+   border-radius: 50px;
+   padding-left: 20px;
+   margin-bottom: 25px;
+   /* padding: 15px; */
+   outline: 0;
+   border: 0;
+
+
+}
+
+input {
+    border: 0;
+    outline: none;
+    flex: 1;
+    background: #edeef0;
+    font-size: 20px;
+    font-weight: 14px;
+    text-align: left;
+    padding:10px;
+
+}
+button {
+    border: 0;
+    outline: none;
+    background: #ff5945;
+    color: white;
+    padding:15px 50px ;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    /* text-align: center;        Centered text
+    text-decoration: none;     Remove underline */
+
+}
+
+ul li {
+    /* text-decoration: none;      remove underline */
+    list-style-type: none;      /*removes the bullet points...vaha jo black dot ata hai use remove krta hai*/
+    font-size: 17px;
+    font-weight:20px ;
+    /* margin:20px; */
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    
+
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50px;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+    
+
+
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+
+}
+ul li .checked ::before {
+    background-image: url(images/checked.png);
+
+}
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+
+    /* padding-left: 350px; */
+}
+ul li span:hover {
+    background: #edeef0;
+}
